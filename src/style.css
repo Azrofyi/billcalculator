@@ -1,0 +1,79 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+/*==================== CSS FILES ====================*/
+@import './reset.css';
+@import './bootstrap-grid.css';
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+
+  /*Buttons Colors*/
+
+  --btn-inactive-color: rgb(0, 71, 75);
+  --btn-active-color: rgb(39, 194, 174);
+  --btn-hover-color: rgb(159, 232, 222);
+
+  /*Background Colors*/
+
+  --body-color: rgb(200, 228, 232);
+  --calc-color: rgb(255, 255, 255);
+  --input-color: rgb(243, 248, 250);
+
+  /*Borders Colors*/
+  --input-active-bordercolor: rgb(88, 168, 158);
+  --input-invalid-bordercolor: rgb(210, 120, 100);
+
+  /*Text Colors*/
+  --text-white: rgb(255, 255, 255);
+  --text-grey: rgb(140, 165, 165);
+  --text-darkgrey: rgb(110, 130, 130);
+  --text-dark: rgb(0, 71, 75);
+  --text-light: rgb(39, 194, 174);
+
+  /*========== Font and typography ==========*/
+  /*1rem = 10px (look into html tag)*/
+  --text-font: 'Roboto Mono', 'Courier New', Courier, monospace;
+}
+/*==================== BASE ====================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0 auto;
+  font-family: var(--text-font);
+  font-size: 20px;
+  background-color: var(--body-color);
+}
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+.btn {
+}
+
+/*==================== LAYOUT ====================*/
+.d-flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*==================== BODY ====================*/
+
+/*==================== TEMP ====================*/
+
+.logo {
+  padding: 20% 0 10%;
+}
