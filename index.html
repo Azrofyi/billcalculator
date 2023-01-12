@@ -7,21 +7,93 @@
     <title>Tip calculator app</title>
   </head>
   <body>
-    <div class="container-xl d-flex-col-center">
+    <div class="d-flex-col-center">
       <img src="./src/images/logo.svg" alt="logo" class="logo" />
-      <div class="billcalc">
-        <div class="billform">
-          <h1 class="billform__title">Bill</h1>
+      <form class="billcalc container-xl row row-cols-1 row-cols-md-2">
+        <!--==================== BILL FIELD ====================-->
+        <div class="col g-0">
+          <div class="d-flex-col-between me-md-5 height-100">
+            <div class="field d-flex-col">
+              <label class="title">Bill</label>
+              <input
+                class="field__input"
+                type="text"
+                name="amount"
+                id="amount"
+                placeholder="0"
+                maxlength="10"
+              />
+            </div>
+            <div class="tips container-fluid g-0">
+              <label class="title">Select Tip %</label>
+              <div class="row row-gap row-cols-2 row-cols-sm-3">
+                <label
+                  ><input type="radio" id="5pct" name="tip" value="5" />
+                  <div class="btn">5%</div></label
+                >
+                <label
+                  ><input type="radio" id="10pct" name="tip" value="10" />
+                  <div class="btn">10%</div></label
+                >
+                <label
+                  ><input type="radio" id="15pct" name="tip" value="15" />
+                  <div class="btn">15%</div></label
+                >
+                <label
+                  ><input type="radio" id="25pct" name="tip" value="25" />
+                  <div class="btn">25%</div></label
+                >
+                <label
+                  ><input type="radio" id="50pct" name="tip" value="50" />
+                  <div class="btn">50%</div></label
+                >
+                <label>
+                  <input
+                    class="field__input"
+                    type="text"
+                    name="customtip"
+                    placeholder="Custom"
+                    maxlength="4"
+                  />
+                </label>
+              </div>
+            </div>
+            <!--==================== NUMBER OF PPl FIELD ====================-->
+            <div class="field d-flex-col">
+              <label class="title">Number of People</label>
+              <input
+                class="field__input"
+                type="text"
+                name="amount"
+                id="amount"
+                placeholder="0"
+                maxlength="4"
+              />
+            </div>
+          </div>
         </div>
-        <div class="tips">
-          <h2 class="tips__title">Select Tip %</h2>
-          5% 10% 15% 25% 50% Custom
+        <!--==================== INFO ====================-->
+        <div class="info d-flex-col-between col">
+          <div>
+            <div class="info__compute">
+              <div class="info__text">
+                <h2>Tip Amount</h2>
+                <p>/ person</p>
+              </div>
+              <div class="viewer tip">$0.00</div>
+            </div>
+            <div class="info__compute">
+              <div class="info__text">
+                <h2>Total</h2>
+                <p>/ person</p>
+              </div>
+              <div class="viewer total">$0.00</div>
+            </div>
+          </div>
+
+          <input class="btn btn_reset" type="reset" value="reset" />
         </div>
-        <div class="numofpplform">Number of People</div>
-        <div class="calculationform">
-          Tip Amount / person Total / person Reset
-        </div>
-      </div>
+      </form>
     </div>
     <script src="./src/index.js"></script>
   </body>

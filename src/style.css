@@ -19,7 +19,7 @@
 
   --body-color: rgb(200, 228, 232);
   --calc-color: rgb(255, 255, 255);
-  --input-color: rgb(243, 248, 250);
+  --input-color: rgb(212, 229, 236);
 
   /*Borders Colors*/
   --input-active-bordercolor: rgb(88, 168, 158);
@@ -56,7 +56,8 @@ img {
 body {
   margin: 0 auto;
   font-family: var(--text-font);
-  font-size: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
   background-color: var(--body-color);
 }
 
@@ -65,15 +66,142 @@ body {
 }
 
 /*==================== LAYOUT ====================*/
+
+.d-flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 .d-flex-col-center {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.d-flex-col-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.d-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-gap {
+  row-gap: 1rem;
+}
+
+.height-100 {
+  height: 100%;
 }
 /*==================== BODY ====================*/
 
 /*==================== TEMP ====================*/
 
 .logo {
-  padding: 20% 0 10%;
+  padding: 10% 0 10%;
+}
+
+.billcalc {
+  padding: 4%;
+  max-width: 960px;
+  background-color: var(--calc-color);
+  border-radius: 18px;
+}
+
+.field {
+  margin-bottom: 2rem;
+}
+
+.title {
+  color: var(--text-darkgrey);
+  padding: 0.6rem 0;
+  display: block;
+}
+
+.field__input {
+  padding: 0.4em 0.5em;
+  border-radius: 4px;
+  border: 2px transparent solid;
+  background-color: var(--input-color);
+  color: var(--text-dark);
+  font-size: 2rem;
+  text-align: right;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.field__input:focus {
+  border: 2px var(--input-active-bordercolor) solid;
+}
+
+.btn {
+  padding: 0.4em 0.5em;
+  border-radius: 4px;
+  border: 2px transparent solid;
+  background-color: var(--btn-inactive-color);
+  color: var(--text-white);
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: var(--text-dark);
+  background-color: var(--btn-hover-color);
+}
+
+input[name='tip']:checked + .btn {
+  color: var(--text-dark);
+  background-color: var(--btn-active-color);
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+input::placeholder {
+  color: var(--text-grey);
+}
+
+input[name='customtip']::placeholder {
+  color: var(--text-darkgrey);
+}
+
+.info {
+  border-radius: 10px;
+  padding: 6% 4%;
+  background-color: var(--btn-inactive-color);
+  color: var(--text-white);
+}
+
+.info__compute {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10%;
+}
+
+.info__text {
+  font-weight: 400;
+}
+
+.info__text > h2 {
+  font-size: 1.4rem;
+}
+
+.info__text > p {
+  color: var(--text-grey);
+}
+.viewer {
+  font-size: 3rem;
+  color: var(--text-light);
+}
+
+.btn_reset {
+  background-color: var(--btn-active-color);
+  color: var(--text-dark);
 }
