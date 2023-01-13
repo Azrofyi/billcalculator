@@ -36,6 +36,7 @@
   /*1rem = 10px (look into html tag)*/
   --text-font: 'Roboto Mono', 'Courier New', Courier, monospace;
 }
+
 /*==================== BASE ====================*/
 * {
   box-sizing: border-box;
@@ -61,62 +62,15 @@ body {
   background-color: var(--body-color);
 }
 
+input[type='radio'] {
+  display: none;
+}
+
+input::placeholder {
+  color: var(--text-grey);
+}
+
 /*==================== REUSABLE CSS CLASSES ====================*/
-.btn {
-}
-
-/*==================== LAYOUT ====================*/
-
-.d-flex-between {
-  display: flex;
-  justify-content: space-between;
-}
-
-.d-flex-between-center {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.d-flex-col-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.d-flex-col-between {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.d-flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.row-gap {
-  row-gap: 1rem;
-}
-
-.height-100 {
-  height: 100%;
-}
-/*==================== BODY ====================*/
-
-/*==================== TEMP ====================*/
-
-.logo {
-  padding: 10% 0 10%;
-}
-
-.billcalc {
-  padding: 4%;
-  max-width: 960px;
-  background-color: var(--calc-color);
-  border-radius: 18px;
-}
-
 .field {
   margin-bottom: 2rem;
 }
@@ -141,6 +95,7 @@ body {
 
 .field__input:focus {
   border: 2px var(--input-active-bordercolor) solid;
+  caret-color: var(--input-active-bordercolor);
 }
 
 .btn {
@@ -160,21 +115,92 @@ body {
   background-color: var(--btn-hover-color);
 }
 
+/*==================== LAYOUT ====================*/
+
+.d-flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.d-flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.d-flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.d-flex-col-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.row-gap {
+  row-gap: 1rem;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+/*==================== BODY ====================*/
+.logo {
+  padding: 10% 0 10%;
+}
+
+.billcalc {
+  padding: 4%;
+  max-width: 960px;
+  background-color: var(--calc-color);
+  border-radius: 18px;
+}
+
+/*==================== TEMP ====================*/
+.bill__icon {
+  position: relative;
+}
+
+.bill__icon::before {
+  content: url(./images/icon-dollar.svg);
+  top: 4.3rem;
+  left: 1.2rem;
+  position: absolute;
+  pointer-events: none;
+}
+
 input[name='tip']:checked + .btn {
   color: var(--text-dark);
   background-color: var(--btn-active-color);
 }
 
-input[type='radio'] {
-  display: none;
-}
-
-input::placeholder {
-  color: var(--text-grey);
-}
-
 input[name='customtip']::placeholder {
   color: var(--text-darkgrey);
+}
+
+.ppl__icon {
+  position: relative;
+}
+
+.ppl__icon::before {
+  content: url(./images/icon-person.svg);
+  top: 4.3rem;
+  left: 1.2rem;
+  position: absolute;
+  pointer-events: none;
+}
+
+.ppl-error {
+  color: var(--input-invalid-bordercolor);
 }
 
 .info {
@@ -210,8 +236,4 @@ input[name='customtip']::placeholder {
 .btn_reset {
   background-color: var(--btn-active-color);
   color: var(--text-dark);
-}
-
-.ppl-error {
-  color: red;
 }

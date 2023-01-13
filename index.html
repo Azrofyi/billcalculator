@@ -10,11 +10,11 @@
     <div class="d-flex-col-center">
       <img src="./src/images/logo.svg" alt="logo" class="logo" />
       <form class="billcalc container-xl row row-cols-1 row-cols-md-2">
-        <!--==================== BILL FIELD ====================-->
         <div class="col g-0">
+          <!--==================== BILL FIELD ====================-->
           <div class="d-flex-col-between me-md-5 height-100">
             <div class="field d-flex-col">
-              <label class="title">Bill</label>
+              <label class="title bill__icon">Bill</label>
               <input
                 class="field__input"
                 type="text"
@@ -24,6 +24,7 @@
                 maxlength="10"
               />
             </div>
+            <!--==================== TIPS ====================-->
             <div class="tips container-fluid g-0 mb-5">
               <label class="title mb-3">Select Tip %</label>
               <div class="row row-gap row-cols-2 row-cols-sm-3">
@@ -61,8 +62,8 @@
             <!--==================== NUMBER OF PPl FIELD ====================-->
             <div class="field d-flex-col">
               <div class="d-flex-between-center">
-                <label class="title">Number of People</label>
-                <div class="ppl-error">Value cannot be 0</div>
+                <label class="title ppl__icon">Number of People</label>
+                <div class="ppl-error">Can't be zero</div>
               </div>
               <input
                 class="field__input"
@@ -93,7 +94,6 @@
               <div class="viewer total">$0.00</div>
             </div>
           </div>
-
           <input
             class="btn btn_reset"
             type="reset"

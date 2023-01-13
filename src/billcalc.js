@@ -50,10 +50,15 @@ export default function () {
   peopleInput.addEventListener('input', function (event) {
     let pplValue = event.target.value;
 
+    pplValue = pplValue.replace(/[^0-9]/g, '');
+    event.target.value = pplValue;
+
     if (+pplValue === 0) {
       errorDiv.style.display = 'block';
+      peopleInput.style.borderColor = 'rgb(210, 120, 100)';
     } else {
       errorDiv.style.display = 'none';
+      peopleInput.style.borderColor = '';
       updateValues();
     }
   });
@@ -81,7 +86,7 @@ export default function () {
     totalViewer.innerHTML = '$' + total.toFixed(2);
   }
 
-  reset.addEventListener('click', function (event) {
+  reset.addEventListener('click', function () {
     tipViewer.innerHTML = '$0.00';
     totalViewer.innerHTML = '$0.00';
   });
