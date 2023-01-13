@@ -1,2 +1,3 @@
-import billcalc from './billcalc';
+import billcalc from './billcalc.js';
+
 billcalc();

@@ -72,6 +72,12 @@ body {
   justify-content: space-between;
 }
 
+.d-flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .d-flex-col-center {
   display: flex;
   flex-direction: column;
@@ -204,4 +210,8 @@ input[name='customtip']::placeholder {
 .btn_reset {
   background-color: var(--btn-active-color);
   color: var(--text-dark);
+}
+
+.ppl-error {
+  color: red;
 }

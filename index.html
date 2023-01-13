@@ -24,8 +24,8 @@
                 maxlength="10"
               />
             </div>
-            <div class="tips container-fluid g-0">
-              <label class="title">Select Tip %</label>
+            <div class="tips container-fluid g-0 mb-5">
+              <label class="title mb-3">Select Tip %</label>
               <div class="row row-gap row-cols-2 row-cols-sm-3">
                 <label
                   ><input type="radio" id="5pct" name="tip" value="5" />
@@ -60,12 +60,15 @@
             </div>
             <!--==================== NUMBER OF PPl FIELD ====================-->
             <div class="field d-flex-col">
-              <label class="title">Number of People</label>
+              <div class="d-flex-between-center">
+                <label class="title">Number of People</label>
+                <div class="ppl-error">Value cannot be 0</div>
+              </div>
               <input
                 class="field__input"
                 type="text"
-                name="amount"
-                id="amount"
+                name="people"
+                id="people"
                 placeholder="0"
                 maxlength="4"
               />
@@ -91,10 +94,15 @@
             </div>
           </div>
 
-          <input class="btn btn_reset" type="reset" value="reset" />
+          <input
+            class="btn btn_reset"
+            type="reset"
+            name="reset"
+            value="reset"
+          />
         </div>
       </form>
     </div>
-    <script src="./src/index.js"></script>
+    <script type="module" src="./src/index.js"></script>
   </body>
 </html>
